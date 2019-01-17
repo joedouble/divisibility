@@ -4,19 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int number = 10;
-        int smallestNumber = 0;
-        boolean isItAMultiple = true;
+        int smallestNumber = 1;
+        int maxDivisor = 10;
 
-        for (int counter = 2; counter <= number; counter++) {
-
-            for (int multiple = 1; multiple <= number; multiple++) {
-                if (counter % multiple != 0) {
-                    isItAMultiple = false;
-                }
-            }
-            if (isItAMultiple = true) {
-                smallestNumber = counter;
+        for (int counter = 1; counter <= maxDivisor; counter++) {
+            if (smallestNumber % counter != 0) {
+                counter = 1;
+                smallestNumber++;
             }
         }
         System.out.println("The smallest number is " + smallestNumber);
